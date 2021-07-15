@@ -18,12 +18,11 @@
       apt_repository:
         repo: deb https://download.docker.com/linux/ubuntu focal stable
         state: present
-    # - name: "Ensure that package manager cache is up to date"
-    #   apt:
-    #     update_cache: true
-    - name: "Install Docker Engine"
+    - name: "Ensure that package manager cache is up to date"
       apt:
         update_cache: true
+    - name: "Install Docker Engine"
+      apt:
         pkg:
           - docker-ce
           - docker-ce-cli
