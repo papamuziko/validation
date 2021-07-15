@@ -1,4 +1,7 @@
 ---
+- name: "Ensure that package manager cache is up to date"
+  apt:
+    update_cache: true
 - name: "Install Prerequisite packages"
   apt:
     pkg:
